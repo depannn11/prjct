@@ -115,29 +115,6 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@keyframes serverLight {
-  0% { opacity: 0.8; }
-  100% { opacity: 1; background: #6366f1; }
-}
-
-@keyframes armWiggle {
-  0% { transform: rotate(-15deg); }
-  50% { transform: rotate(15deg); }
-  100% { transform: rotate(-15deg); }
-}
-
-@keyframes floatAndRotate {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(180deg); }
-  100% { transform: translateY(0) rotate(360deg); }
-}
-
-@keyframes floatSmooth {
-  0% { transform: translateY(0) rotate(45deg); }
-  50% { transform: translateY(-5px) rotate(45deg); }
-  100% { transform: translateY(0) rotate(45deg); }
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
