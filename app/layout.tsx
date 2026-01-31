@@ -8,9 +8,15 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Konfigurasi Sistem & Infrastruktur',
-  description: 'Tim kami sedang bekerja keras untuk menyiapkan proyek terbesar. Harap bersabar!',
-  generator: 'soraa.my.id',
+  title: 'DepStore - Deploy Static Sites in Seconds',
+  description: 'DepStore is the fastest way to deploy your HTML and React applications. Get a domain, upload your files, and go live in seconds.',
+  generator: 'v0.app',
+  keywords: ['deployment', 'hosting', 'static sites', 'web deployment', 'surge alternative'],
+  openGraph: {
+    title: 'DepStore - Deploy Static Sites in Seconds',
+    description: 'Deploy your websites in seconds with DepStore',
+    url: 'https://depstore.dev',
+  },
   icons: {
     icon: [
       {
@@ -28,6 +34,16 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    themeColor: [
+      { media: '(prefers-color-scheme: light)', color: 'white' },
+      { media: '(prefers-color-scheme: dark)', color: 'black' },
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -36,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="id">
+    <html lang="en">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
